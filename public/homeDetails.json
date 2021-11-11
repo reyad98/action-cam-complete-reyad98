@@ -1,0 +1,28 @@
+[
+    {
+        "name": "Travel Photography",
+        "duration": "2 Months",
+        "fee": 140,
+        "img": "https://media.istockphoto.com/photos/young-man-arms-outstretched-by-the-sea-at-sunrise-enjoying-freedom-picture-id1285301614?b=1&k=20&m=1285301614&s=170667a&w=0&h=tDEC2-p91cZiNU5C19sVhB9L08PmaH5wIijCvRDalCI="
+    },
+   
+    {
+        "name": "Micro Photography",
+        "duration": "2 Months",
+        "fee": 100,
+        "img": "https://images.unsplash.com/photo-1620840737684-7661256552e5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fG1pY3JvJTIwcGhvdG98ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+    },
+    {
+        "name": "Product Photography",
+        "duration": "3 Months",
+        "fee": 160,
+        "img": "https://media.istockphoto.com/photos/small-business-owener-picture-id1057255516?b=1&k=20&m=1057255516&s=170667a&w=0&h=bC22qMd9z3v_CV0jYf1UEF5fNJMRWfBWvTQToKGnlUE="
+    },
+   
+    {
+        "name": "Film Making",
+        "duration": "4 Months",
+        "fee": 320,
+        "img": "https://images.unsplash.com/photo-1485846234645-a62644f84728?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZmlsbSUyMG1ha2luZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+    }
+]

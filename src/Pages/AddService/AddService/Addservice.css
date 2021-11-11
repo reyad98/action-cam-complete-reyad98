@@ -1,0 +1,24 @@
+.add-service form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+ .add-service form input,textarea{
+     width: 50%;
+     height: 30px;
+     margin-bottom: 20px;
+ }
+ .head-part{
+     color:rgb(15, 128, 235);
+     margin: 20px;
+ }
+ .btn{
+     background-color: blueviolet;
+     color: white;
+     width: 40%;
+     border-radius: 5px;
+     border: none;
+     padding: 10px;
+     
+ }
