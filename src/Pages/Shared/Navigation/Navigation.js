@@ -15,7 +15,9 @@ const Navigation = () => {
         <Box sx={{ flexGrow: 1,Color:'#211D22' }}>
       <AppBar position="static">
         <Toolbar>
+
           <IconButton
+    
             size="large"
             edge="start"
             color="inherit"
@@ -24,6 +26,9 @@ const Navigation = () => {
           >
             <MenuIcon />
           </IconButton>
+          <Link style={{ textDecoration: 'none',color:'white' }} to="home">
+             <Button color="inherit" >Home</Button>
+          </Link>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Capture Action
           </Typography>

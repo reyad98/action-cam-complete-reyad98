@@ -32,7 +32,7 @@ const HomeDetails = (props) => {
                     <Typography sx={{my:2}} variant="h4">
                         {price}$ Only
                     </Typography>
-                   <Link to={`/purches/${_id}`} style={{textDecoration:'none'}}>
+                   <Link to={`/confrimpurches/${_id}`} style={{textDecoration:'none'}}>
                    <Button variant="contained">Purches!</Button>
                    </Link>
                 </CardContent>

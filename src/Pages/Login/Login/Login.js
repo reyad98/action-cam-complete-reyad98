@@ -4,12 +4,17 @@ import { Grid } from '@mui/material';
 import login from '../../../image/loginpng.png'
 import { NavLink, useLocation, useHistory } from 'react-router-dom';
 import { AlarmTwoTone } from '@mui/icons-material';
+import useAuth from '../../../hooks/useAuth';
 
 
 const Login = () => {
     
     const [loginData, setLoginData] = useState({})
-
+    const { user, loginUser, signInWithGoogle, isLoading, authError } = useAuth();
+   
+    const location = useLocation();
+    const history = useHistory();
+     
     const handleOnChange = e => {
         const field = e.target.name;
         const value = e.target.value;
@@ -19,7 +24,12 @@ const Login = () => {
     }
 
     const handleLoginSubmit = e =>{
-        alert('hello')
+        loginUser(loginData.email, loginData.password, location, history);
+        e.preventDefault();
+    }
+    
+    const handleGoogleSignIn = () => {
+        signInWithGoogle(location, history)
     }
     return (
         <Container>
@@ -49,12 +59,12 @@ const Login = () => {
                         to="/register">
                         <Button variant="text">New User? Please Register</Button>
                     </NavLink>
-                    {/* {isLoading && <CircularProgress />}
+                    {isLoading && <CircularProgress />}
                     {user?.email && <Alert severity="success">Login successfully!</Alert>}
-                    {authError && <Alert severity="error">{authError}</Alert>} */}
+                    {authError && <Alert severity="error">AN error Accured</Alert>}
                 </form>
                 <p>------------------------</p>
-                {/* <Button onClick={handleGoogleSignIn} variant="contained">Google Sign In</Button> */}
+                <Button onClick={handleGoogleSignIn} variant="contained">Google Sign In</Button>
             </Grid>
             <Grid item xs={12} md={6}>
                 <img style={{ width: '100%' }} src={login} alt="" />

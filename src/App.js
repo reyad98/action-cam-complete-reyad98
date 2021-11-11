@@ -18,6 +18,8 @@ import Expurches from './Pages/DetailsPage/ExPurches/Expurches';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import Authprovider from './contexts/AuthProvider/AuthProvider';
+import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+import ConfrimPurches from './Pages/DetailsPage/ConfrimPurches/ConfrimPurches';
 
 
 function App() {
@@ -42,19 +44,21 @@ function App() {
          <Payment></Payment>
          </Route>
          <Route path="/login">
+         <Navigation></Navigation>
            <Login></Login>
          </Route>
          <Route path="/register">
+         <Navigation></Navigation>
            <Register></Register>
            </Route>
-         <Route path="/purches/:serviceId">
+         <PrivateRoute path="/confrimpurches/:serviceId">
            <Navigation></Navigation>
-         <Purches></Purches>
-         </Route>
-         <Route path="/expurches/:serviceId">
+          <ConfrimPurches></ConfrimPurches>
+         </PrivateRoute>
+         <PrivateRoute path="/exconfrimpurches/:serviceId">
            <Navigation></Navigation>
         <Expurches></Expurches>
-         </Route>
+         </PrivateRoute>
          {/* <Route path="/addallservices">
            <AddAllServices></AddAllServices>
          </Route> */}

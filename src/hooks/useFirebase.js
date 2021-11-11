@@ -54,8 +54,11 @@ const useFirebase = () => {
         setIsLoading(true);
         signInWithPopup(auth, googleProvider)
             .then((result) => {
+                const destination = location?.state?.from || '/';
+                history.replace(destination);
                 const user = result.user;
                 setAuthError('');
+               // history.replace('/');
             }).catch((error) => {
                 setAuthError(error.message);
             }).finally(() => setIsLoading(false));

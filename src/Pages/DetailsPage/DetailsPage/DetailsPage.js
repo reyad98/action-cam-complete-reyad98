@@ -29,7 +29,7 @@ const DetailsPage = (props) => {
                     <Typography sx={{my:2}} variant="h4">
                         {price}$ Only
                     </Typography>
-                   <Link style={{textDecoration:'none'}} to={`/expurches/${_id}`}>
+                   <Link style={{textDecoration:'none'}} to={`/exconfrimpurches/${_id}`}>
                    <Button variant="contained">Purches!</Button>
                    </Link>
                 </CardContent>

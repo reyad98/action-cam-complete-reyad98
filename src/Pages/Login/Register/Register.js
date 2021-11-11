@@ -1,6 +1,6 @@
 import { Alert, Button, CircularProgress, Container, Grid, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink,useLocation,useHistory} from 'react-router-dom';
 import login from '../../../image/loginpng.png';
 import useAuth from '../../../hooks/useAuth';
 
@@ -8,7 +8,10 @@ import useAuth from '../../../hooks/useAuth';
 const Register = () => {
     const [loginData, setLoginData] = useState({});
      
-    const {registerUser,user,isLoading,authError} = useAuth();
+    const {registerUser,user,isLoading,authError,signInWithGoogle} = useAuth();
+      
+    const location = useLocation();
+    const history = useHistory();
 
     const handleOnBlur = e => {
         const field = e.target.name;
@@ -25,8 +28,12 @@ const Register = () => {
             alert('Your password did not match');
             return
         }
-        registerUser(loginData.email,loginData.password);
+        registerUser(loginData.email,loginData.password,location,history);
             e.preventDefault();
+    }
+    
+    const handleGoogleSignIn = () => {
+        signInWithGoogle(location, history)
     }
 
     return (
@@ -76,6 +83,8 @@ const Register = () => {
                     {isLoading && <CircularProgress />}
                     {user?.email && <Alert severity="success">User created successfully !!!</Alert>} 
                      {authError && <Alert severity="error">{authError}</Alert> }
+                   <div>- - - - - - - - - - - - - - - - - - - - - </div>
+                   <Button onClick={handleGoogleSignIn} variant="contained">Google Sign In</Button>
 
                 </Grid>
                 <Grid item xs={12} md={6}>
