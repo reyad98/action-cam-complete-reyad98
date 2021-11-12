@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 import { Button } from '@mui/material';
 const DetailsPage = (props) => {
-    const {_id, name, description, img ,price} = props.service;
+    const { _id, name, description, img ,price} = props.service;
     return (
         <Grid item xs={4} sm={4} md={4} >
             <Card sx={{ minWidth: 275, boxShadow: 2 }}>
@@ -18,6 +18,7 @@ const DetailsPage = (props) => {
                     image={img}
                     alt="green iguana"
                 />
+
                 <CardContent>
 
                     <Typography variant="h5" component="div">
@@ -29,7 +30,7 @@ const DetailsPage = (props) => {
                     <Typography sx={{my:2}} variant="h4">
                         {price}$ Only
                     </Typography>
-                   <Link style={{textDecoration:'none'}} to={`/exconfrimpurches/${_id}`}>
+                   <Link to={`/exconfrimpurches/${_id}`} style={{textDecoration:'none'}}>
                    <Button variant="contained">Purches!</Button>
                    </Link>
                 </CardContent>

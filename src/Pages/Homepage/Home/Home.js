@@ -1,17 +1,20 @@
 import React from 'react';
-import Addservice from '../../AddService/AddService/Addservice';
 import Navigation from '../../Shared/Navigation/Navigation';
-import HomeDetails from '../HomeDetails/HomeDetails';
+import Mypart from '../MyPart/Mypart';
 import ShowProduct from '../ShowProduct/ShowProduct';
 import TopBanner from '../TopBanner/TopBanner';
+import Footer from '../Footer/Footer';
+import Reviews from '../Reviews/Reviews';
 
 const Home = () => {
     return (
         <div>
            <Navigation></Navigation>
            <TopBanner></TopBanner>
-          <ShowProduct></ShowProduct>
-        
+           <ShowProduct></ShowProduct>
+           <Mypart></Mypart>
+           <Reviews></Reviews>
+           <Footer></Footer>
         </div>
     );
 };

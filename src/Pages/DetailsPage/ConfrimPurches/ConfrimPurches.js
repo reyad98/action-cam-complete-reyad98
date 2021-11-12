@@ -1,11 +1,11 @@
-import { Button, Grid, Paper, Typography } from '@mui/material';
+import { Alert, Button, Grid, Paper, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import Purches from '../Purches/Purches';
 
 const ConfrimPurches = ({name,price}) => {
     
-
+    const [orderSuccess,setOrderSuccess] = useState(false)
 
     const [openBooking, setOpenBooking] = React.useState(false);
     const handleBookingOpen = () => setOpenBooking(true);
@@ -36,14 +36,16 @@ const ConfrimPurches = ({name,price}) => {
                 </Typography>
                 
                 <Button onClick={handleBookingOpen} variant="contained" >Show Details & Purches</Button>
+                {orderSuccess && <Alert severity="success">Order Placed</Alert>}
             </Paper>
 
         </Grid>
         <Purches
-            dname={name}
-            price={price}
-            open={openBooking}
+            name={service.name}
+            price={service.price}
+            openBooking={openBooking}
             handleBookingClose={handleBookingClose}
+            setOrderSuccess={setOrderSuccess}
         >
         </Purches>
     </>

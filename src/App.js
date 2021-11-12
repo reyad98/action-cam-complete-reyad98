@@ -20,6 +20,7 @@ import Register from './Pages/Login/Register/Register';
 import Authprovider from './contexts/AuthProvider/AuthProvider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import ConfrimPurches from './Pages/DetailsPage/ConfrimPurches/ConfrimPurches';
+import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 
 
 function App() {
@@ -43,6 +44,9 @@ function App() {
          <Route path="/payment">
          <Payment></Payment>
          </Route>
+         <PrivateRoute path="/dashboard">
+         <Dashboard></Dashboard>
+         </PrivateRoute>
          <Route path="/login">
          <Navigation></Navigation>
            <Login></Login>
@@ -57,7 +61,7 @@ function App() {
          </PrivateRoute>
          <PrivateRoute path="/exconfrimpurches/:serviceId">
            <Navigation></Navigation>
-        <Expurches></Expurches>
+          <Expurches></Expurches>
          </PrivateRoute>
          {/* <Route path="/addallservices">
            <AddAllServices></AddAllServices>

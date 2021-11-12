@@ -20,42 +20,71 @@ const style = {
 };
 
 
-const Purches = ({name,price,openBooking,handleBookingOpen,handleBookingClose}) => {
-    
+  const Purches = ({name,price,openBooking,setOrderSuccess,handleBookingOpen,handleBookingClose}) => {
+      
   const {user} = useAuth();
-
-
-
   
+  const initialInfo = {email:user.email, name:user.displayName}
+  const [bookingInfo,setBookingInfo] = useState(initialInfo);
 
+ const handleOnBlur = e =>{
+        const field = e.target.name;
+        const value = e.target.value;
+        const newInfo = { ...bookingInfo };
+        newInfo[field] = value;
+        //console.log(newInfo);
+        setBookingInfo(newInfo);
+ }
+  
+ const handleBookingSubmit = e =>{
+     const orderDetails ={
+         ...bookingInfo,
+         name,
+         price,
+     }
+     //console.log(orderDetails);
+      
+     fetch('http://localhost:5000/orderdetails',{
+         method: 'POST',
+         headers:{
+             'content-type' : 'application/json'
+         },
+         body:JSON.stringify(orderDetails)
+     })
+  .then(res=>res.json())
+  .then(data =>{
+      if(data.insertedId){
+        setOrderSuccess(true);
+        handleBookingClose();
+      }
+  })
+
+
+     e.preventDefault();
+ }
 
    
     return (
-        // <div>
-        // <h2>Details of : {service.name}</h2>
-        // <h2>this is booking: {serviceId}</h2>
-        // <Link style={{textDecoration:'none'}}><Button variant="contained" color="secondary">Pay now</Button></Link>
-        // </div>
+      
         <div>
-            {/* <h2>To Purches and Confrim Order Click Here!</h2>
-        <Button variant="contained" onClick={handleBookingOpen}>Purches</Button> */}
+            
         <Modal
-          open={openBooking}
-          onClose={handleBookingClose}
           aria-labelledby="transition-modal-title"
           aria-describedby="transition-modal-description"
+          open={openBooking}
+          onClose={handleBookingClose}
           closeAfterTransition
-            BackdropComponent={Backdrop}
-            BackdropProps={{
-                timeout: 400,
-            }}
+          BackdropComponent={Backdrop}
+          BackdropProps={{
+              timeout: 500,
+          }}
         >
           <Fade in={openBooking}>
                 <Box sx={style}>
                     <Typography id="transition-modal-title" variant="h6" component="h2">
                        Details of Purches
                     </Typography>
-                    <form >
+                    <form onSubmit={handleBookingSubmit} >
                         <TextField
                             disabled
                             sx={{ width: '90%', m: 1 }}
@@ -67,7 +96,7 @@ const Purches = ({name,price,openBooking,handleBookingOpen,handleBookingClose}) 
                             disabled
                             sx={{ width: '90%', m: 1 }}
                             id="outlined-size-small"
-                            name="patientName"
+                            name="price"
                             //onBlur={handleOnBlur}
                             defaultValue={price}
                             size="small"
@@ -76,20 +105,20 @@ const Purches = ({name,price,openBooking,handleBookingOpen,handleBookingClose}) 
                             sx={{ width: '90%', m: 1 }}
                             id="outlined-size-small"
                             name="email"
-                           // onBlur={handleOnBlur}
+                            onBlur={handleOnBlur}
                             defaultValue={user.email}
                             size="small"
                         />
                         <TextField
                             sx={{ width: '90%', m: 1 }}
                             id="outlined-size-small"
-                            name="phone"
-                           // onBlur={handleOnBlur}
-                            defaultValue={user.displayName}
+                            name="name"
+                            onBlur={handleOnBlur}
+                            defaultValue="Your Name"
                             size="small"
                         />
                        
-                        <Button type="submit" variant="contained">Submit</Button>
+                        <Button type="submit" variant="contained">Place</Button>
                     </form>
                 </Box>
             </Fade>
