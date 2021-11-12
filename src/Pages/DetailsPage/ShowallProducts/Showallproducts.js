@@ -3,11 +3,12 @@ import Box from '@mui/material/Box';
 import { Container, Grid } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import DetailsPage from '../DetailsPage/DetailsPage';
+import HomeDetails from '../../Homepage/HomeDetails/HomeDetails';
 
 const Showallproducts = () => {
     const  [allservices,setAllServices] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/allservices')
+        fetch('http://localhost:5000/services')
         .then(res => res.json())
         .then(data => setAllServices(data))
     },[])
@@ -22,10 +23,10 @@ const Showallproducts = () => {
                 </Typography>
                 <Grid container spacing={{ xs: 2, md: 3, }} columns={{ xs: 4, sm: 8, md: 12 }}>
                     {
-                        allservices.map(service => <DetailsPage
+                        allservices.map(service => <HomeDetails
                             key={service.name}
                             service={service}
-                        ></DetailsPage>)
+                        ></HomeDetails>)
                     }
                 </Grid>
             </Container>

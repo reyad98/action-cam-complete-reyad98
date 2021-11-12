@@ -18,7 +18,7 @@ const AddAllServices = () => {
 
     return (
   <div className="add-service">
-        <h2 className="head-part">Please add a service to all details page</h2>
+        <h2 className="head-part">Add a service to All Details Page</h2>
         <form onSubmit={handleSubmit(onSubmit)}>
             <input {...register("name", { required: true, maxLength: 20 })} placeholder="name"/>
             <textarea {...register("description")} placeholder="description" />
