@@ -40,7 +40,7 @@ const ShowProduct = () => {
      useEffect(()=>{
          fetch('http://localhost:5000/services')
          .then(res => res.json())
-         .then(data => setServices(data.slice(0,4)))
+         .then(data => setServices(data.slice(0,6)))
      },[])
 
     return (

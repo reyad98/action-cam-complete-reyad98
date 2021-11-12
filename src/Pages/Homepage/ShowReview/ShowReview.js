@@ -1,31 +1,31 @@
 import React, { useEffect, useState } from 'react';
+import { experimentalStyled as styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import { Container, Grid } from '@mui/material';
 import Typography from '@mui/material/Typography';
-import HomeDetails from '../../Homepage/HomeDetails/HomeDetails';
+import FinalReview from '../Reviews/FinalReview/FinalReview';
 
-const Showallproducts = () => {
-    const  [allservices,setAllServices] = useState([])
-    useEffect(()=>{
-        fetch('http://localhost:5000/services')
-        .then(res => res.json())
-        .then(data => setAllServices(data))
-    },[])
+const ShowReview = () => {
+    const  [services,setServices] = useState([])
+     useEffect(()=>{
+         fetch('http://localhost:5000/allservices')
+         .then(res => res.json())
+         .then(data => setServices(data))
+     },[])
+
     return (
         <Box sx={{ flexGrow: 1, my: 5 }}>
             <Container>
-                <Typography sx={{ fontWeight: 500, m: 2, my: 5, color: 'success.main' }} variant="h6" component="div">
-                    All Products!!! 
-                </Typography>
+                
                 <Typography sx={{ fontWeight: 500, m: 2 }} variant="h4" component="div">
-                    Camera we provide can be purches from here
+                    Customers Reviews
                 </Typography>
                 <Grid container spacing={{ xs: 2, md: 3, }} columns={{ xs: 4, sm: 8, md: 12 }}>
                     {
-                        allservices.map(service => <HomeDetails
+                        services.map(service => <FinalReview
                             key={service.name}
                             service={service}
-                        ></HomeDetails>)
+                        ></FinalReview>)
                     }
                 </Grid>
             </Container>
@@ -33,4 +33,5 @@ const Showallproducts = () => {
     );
 };
 
-export default Showallproducts;
+export default ShowReview;
+   

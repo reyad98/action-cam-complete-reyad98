@@ -39,6 +39,7 @@ function App() {
           <TogetherAdd></TogetherAdd>
          </Route>
          <Route path="/detailspage">
+           <Navigation></Navigation>
           <Showallproducts></Showallproducts>
          </Route>
          <Route path="/payment">

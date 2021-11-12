@@ -15,17 +15,30 @@ import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import { Grid } from '@mui/material';
-import AllOrder from '../AllOders/AllOrder';
-import order from '../../../image/order.png'
-import { NavLink } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch
+} from "react-router-dom";
+import { Button } from '@mui/material';
+import DashboardHome from '../DashboardHome/DashboardHome';
+import MakeAdmin from '../MakeAdmin/MakeAdmin';
+import PaymentMethod from '../PaymentMethod/PaymentMethod';
+import useAuth from '../../../hooks/useAuth';
+import Myorders from '../Myorders/Myorders';
+import Reviews from '../../Homepage/Reviews/Reviews';
 
 const drawerWidth = 210;
 
 function Dashboard(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-
+  
+  let { path, url } = useRouteMatch();
+  
+  const {admin} = useAuth();
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
@@ -34,7 +47,21 @@ function Dashboard(props) {
     <div>
       <Toolbar />
       <Divider />
-      <NavLink to="/detailspage" style={{textDecoration:'none'}}>More Orders</NavLink>
+
+      <Link to={`${url}/myorders`} style={{textDecoration:'none'}}><Button color="inherit">My Orders</Button></Link><br />
+
+      <Link to="/detailspage" style={{textDecoration:'none'}}><Button color="inherit">More Orders</Button></Link><br />
+      <Link to={`${url}`} style={{textDecoration:'none'}}><Button color="inherit">Dashboard</Button></Link><br />
+      <Link to={`${url}/payment`} style={{textDecoration:'none'}}><Button color="inherit">Payment</Button></Link><br />
+      <Link to={`${url}/reviews`} style={{textDecoration:'none'}}><Button color="inherit">Review</Button></Link><br />
+
+      {admin &&
+         <Box>
+            <Link to={`${url}/makeAdmin`} style={{textDecoration:'none'}}><Button color="inherit">Make Admin</Button></Link><br />
+
+         </Box>
+      }
+
       <List>
         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
           <ListItem button key={text}>
@@ -113,17 +140,26 @@ function Dashboard(props) {
         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
         <Toolbar />
-        <Typography paragraph>
-          <Grid container spacing={2}>
-            <Grid item xs={8}>
-            <AllOrder></AllOrder>
-            </Grid>
-             <Grid item xs={4}>
-             <img src={order} style={{width:'300px'}} alt="" />
-            </Grid>
-          </Grid>
+       
+        <Switch>
+        <Route exact path={path}>
+         <DashboardHome></DashboardHome>
+        </Route>
+
+        <Route path={`${path}/myorders`}>
+           <Myorders></Myorders>
+        </Route>
+        <Route path={`${path}/reviews`}>
+        <Reviews></Reviews>
+        </Route>
+        <Route path={`${path}/makeAdmin`}>
+            <MakeAdmin></MakeAdmin>
+        </Route>
+        <Route path={`${path}/payment`}>
+            <PaymentMethod></PaymentMethod>
+        </Route>
+      </Switch>
           
-        </Typography>
         
       </Box>
     </Box>
