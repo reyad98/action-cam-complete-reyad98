@@ -1,6 +1,6 @@
 # Camera 360
 
-This site was made for camera  [Create React App](https://action-camera360.web.app/)
+This site was made for camera  [Capture The Action](https://action-camera360.web.app/)
 
 Buy Camera From Here
 
