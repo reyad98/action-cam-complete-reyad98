@@ -44,7 +44,7 @@ const style = {
      }
      //console.log(orderDetails);
       
-     fetch('http://localhost:5000/orderdetails',{
+     fetch('https://damp-peak-19610.herokuapp.com/orderdetails',{
          method: 'POST',
          headers:{
              'content-type' : 'application/json'

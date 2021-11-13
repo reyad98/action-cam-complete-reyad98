@@ -17,7 +17,7 @@ const ConfrimPurches = ({name,price}) => {
     console.log(serviceId);
     
     useEffect(()=>{
-        fetch(`http://localhost:5000/services/${serviceId}`)
+        fetch(`https://damp-peak-19610.herokuapp.com/services/${serviceId}`)
         .then(res => res.json())
         .then(data => setService(data));
     },[])

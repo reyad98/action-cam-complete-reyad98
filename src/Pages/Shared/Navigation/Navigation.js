@@ -33,9 +33,6 @@ const Navigation = () => {
             Capture Action
           </Typography>
           
-          <Link style={{ textDecoration: 'none',color:'white' }} to="addservice">
-             <Button color="inherit" >Add a service</Button>
-          </Link>
 
           {/* <Link to="/appoinment"><Button color="inherit" style={{ textDecoration: 'none' }}>Appoinment</Button></Link> */}
             {

@@ -29,6 +29,8 @@ import PaymentMethod from '../PaymentMethod/PaymentMethod';
 import useAuth from '../../../hooks/useAuth';
 import Myorders from '../Myorders/Myorders';
 import Reviews from '../../Homepage/Reviews/Reviews';
+import AdminRoute from '../../Login/AdminRoute/AdminRoute';
+import TogetherAdd from '../../AddService/TogetharAdd/TogetherAdd';
 
 const drawerWidth = 210;
 
@@ -58,20 +60,12 @@ function Dashboard(props) {
       {admin &&
          <Box>
             <Link to={`${url}/makeAdmin`} style={{textDecoration:'none'}}><Button color="inherit">Make Admin</Button></Link><br />
+            <Link to={`${url}/addservices`} style={{textDecoration:'none'}}><Button color="inherit">Add a Product</Button></Link><br />
 
          </Box>
       }
 
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
+      
      
     </div>
   );
@@ -152,9 +146,12 @@ function Dashboard(props) {
         <Route path={`${path}/reviews`}>
         <Reviews></Reviews>
         </Route>
-        <Route path={`${path}/makeAdmin`}>
+        <AdminRoute path={`${path}/makeAdmin`}>
             <MakeAdmin></MakeAdmin>
-        </Route>
+        </AdminRoute>
+        <AdminRoute path={`${path}/addservices`}>
+            <TogetherAdd></TogetherAdd>
+        </AdminRoute>
         <Route path={`${path}/payment`}>
             <PaymentMethod></PaymentMethod>
         </Route>

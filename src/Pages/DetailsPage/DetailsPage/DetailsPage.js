@@ -9,7 +9,7 @@ import { Button } from '@mui/material';
 const DetailsPage = (props) => {
     const { _id, name, description, img ,price} = props.service;
     return (
-        <Grid item xs={4} sm={4} md={4} >
+        <Grid item xs={3} sm={3} md={3} >
             <Card sx={{ minWidth: 275, boxShadow: 2 }}>
 
                 <CardMedia

@@ -8,7 +8,7 @@ import FinalReview from '../Reviews/FinalReview/FinalReview';
 const ShowReview = () => {
     const  [services,setServices] = useState([])
      useEffect(()=>{
-         fetch('http://localhost:5000/allservices')
+         fetch('https://damp-peak-19610.herokuapp.com/allservices')
          .then(res => res.json())
          .then(data => setServices(data))
      },[])

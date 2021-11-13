@@ -28,7 +28,7 @@ const HomeDetails = (props) => {
                     <Typography variant="body2" color="text.secondary">
                         {description}
                     </Typography>
-                    <Typography sx={{my:2}} variant="h4">
+                    <Typography sx={{my:2}} variant="h5">
                         {price}$ Only
                     </Typography>
                    <Link to={`/confrimpurches/${_id}`} style={{textDecoration:'none'}}>

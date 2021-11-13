@@ -14,7 +14,7 @@ const AllOrder = () => {
     const [orders,setOrders] = useState([]);
 
     useEffect(()=>{
-        const url =`http://localhost:5000/orderdetails?email=${user.email}`
+        const url =`https://damp-peak-19610.herokuapp.com/orderdetails?email=${user.email}`
         fetch(url)
         .then(res =>res.json())
         .then(data => setOrders(data))
@@ -22,7 +22,7 @@ const AllOrder = () => {
 
     return (
         <div>
-            <h2>all orders:{orders.length}</h2>
+            <h2>Total Orders:{orders.length}</h2>
             <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="Your orders">
         <TableHead>

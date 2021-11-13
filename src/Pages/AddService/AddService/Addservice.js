@@ -1,3 +1,4 @@
+import { Button } from '@mui/material';
 import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
@@ -25,7 +26,8 @@ const Addservice = () => {
             <input type="number" {...register("price",)} placeholder="price" />
             <input {...register("img")} placeholder="image url" />
 
-            <input className="btn" type="submit" />
+            <Button type="submit" variant="outlined">Add  Product</Button>
+
         </form>
     </div>
     );

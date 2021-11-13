@@ -7,7 +7,7 @@ import HomeDetails from '../../Homepage/HomeDetails/HomeDetails';
 const Showallproducts = () => {
     const  [allservices,setAllServices] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/services')
+        fetch('https://damp-peak-19610.herokuapp.com/services')
         .then(res => res.json())
         .then(data => setAllServices(data))
     },[])

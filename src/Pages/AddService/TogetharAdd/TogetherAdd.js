@@ -5,7 +5,7 @@ import Addservice from '../AddService/Addservice';
 const TogetherAdd = () => {
     return (
         <div>
-            <Navigation></Navigation>
+            
             <Addservice></Addservice>
            
         </div>

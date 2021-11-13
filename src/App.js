@@ -21,6 +21,7 @@ import Authprovider from './contexts/AuthProvider/AuthProvider';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import ConfrimPurches from './Pages/DetailsPage/ConfrimPurches/ConfrimPurches';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
+import Footer from './Pages/Homepage/Footer/Footer';
 
 
 function App() {
@@ -35,12 +36,10 @@ function App() {
          <Route path="/home">
            <Home></Home>
          </Route>
-         <Route path="/addservice">
-          <TogetherAdd></TogetherAdd>
-         </Route>
          <Route path="/detailspage">
            <Navigation></Navigation>
           <Showallproducts></Showallproducts>
+          <Footer></Footer>
          </Route>
          <Route path="/payment">
          <Payment></Payment>
