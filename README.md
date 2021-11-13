@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+# Camera 360
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This site was made for camera  [Create React App](https://action-camera360.web.app/)
 
-## Available Scripts
+Buy Camera From Here
 
-In the project directory, you can run:
+### `What is Action cam`
+The camera is typically worn or mounted in such a way that it can shoot from the point of view of the shooter. Some examples of common places to mount an action camera are on a hat or helmet, on the chest, or on the handlebars of a bike or similar vehicle. They may also be mounted on a tripod or on a monopod for handheld use. An action camera is usually designed to require minimal interaction once recording has begun, as this allows continuous capture of the action without having to interact with the camera. A typical action camera records onto a micro SD card, and has either a Micro-USB or a USB-C connector.
+### `Why it best for action`
+The category commonly is associated with the GoPro range of cameras, and many action cameras come with a GoPro mount adapter to take advantage of the accessories available for these cameras. However, there are many GoPro alternatives which are entering the market of action cameras in recent times.
 
-### `npm start`
+In 2014, worldwide action camera sales increased by 44 percent from the previous year and half of them have the capability to shoot Ultra High Definition at 4K resolution. Action camera sales have surpassed traditional camcorder and compact camera sales, and it is predicted that in 2019, action camera sales will surpass all types of cameras due to the sales of other camera types declining or stabilizing
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### `Its used for`
+What Is an Action Camera Used For? An action camera is a small, rugged, waterproof digital camera designed for capturing immersive action shots. They allow you to jump right in and become part of the adventure to capture photos and videos in a way that traditional cameras or smartphones just can't.
+### `Why you buy from us`
+We import cam at a resonable price and we sell at a low price from other.You also get free delivary if order.
+### `Evaluation of actiuon cam`
+Main advantage of a GoPro Hero 001, besides it being waterproof, was a secure wrist mount, which according to Nick “He designed so it fits his 9-year old cousin as well”. Camera operated completely mechanical and did not require batteries.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+It could take 24 pictures with a W/24 exposure film that was loaded inside. In order to replace a film, you simply had to unbuckle two clips from the waterproof case, It supported any kind of 35 mm film, colored or black and white.

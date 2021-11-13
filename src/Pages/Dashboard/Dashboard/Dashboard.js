@@ -36,9 +36,11 @@ const drawerWidth = 210;
 
 function Dashboard(props) {
   const { window } = props;
+  const {logout} = useAuth();
   const [mobileOpen, setMobileOpen] = React.useState(false);
   
   let { path, url } = useRouteMatch();
+
   
   const {admin} = useAuth();
   const handleDrawerToggle = () => {
@@ -50,12 +52,12 @@ function Dashboard(props) {
       <Toolbar />
       <Divider />
 
+      <Link to="/home" style={{textDecoration:'none'}}><Button color="inherit">Home</Button></Link><br />
       <Link to={`${url}/myorders`} style={{textDecoration:'none'}}><Button color="inherit">My Orders</Button></Link><br />
 
-      <Link to="/detailspage" style={{textDecoration:'none'}}><Button color="inherit">More Orders</Button></Link><br />
-      <Link to={`${url}`} style={{textDecoration:'none'}}><Button color="inherit">Dashboard</Button></Link><br />
       <Link to={`${url}/payment`} style={{textDecoration:'none'}}><Button color="inherit">Payment</Button></Link><br />
       <Link to={`${url}/reviews`} style={{textDecoration:'none'}}><Button color="inherit">Review</Button></Link><br />
+      <Link to={`${url}`} style={{textDecoration:'none'}}><Button color="inherit">Dashboard</Button></Link><br />
 
       {admin &&
          <Box>
@@ -64,6 +66,8 @@ function Dashboard(props) {
 
          </Box>
       }
+            <Button onClick={logout} style={{ textDecoration: 'none',color:'blue' }} >Logout</Button>
+
 
       
      

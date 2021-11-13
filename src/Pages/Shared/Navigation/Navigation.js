@@ -12,7 +12,7 @@ import useAuth from '../../../hooks/useAuth';
 const Navigation = () => {
   const {user,logout} = useAuth();
     return (
-        <Box sx={{ flexGrow: 1,Color:'#211D22' }}>
+        <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
 

@@ -7,11 +7,16 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { Button } from '@mui/material';
+import { useParams } from 'react-router';
 
 
 const AllOrder = () => {
     const {user} = useAuth();
     const [orders,setOrders] = useState([]);
+    //for delet 
+    const [services,setServices] =useState([]);
+    const {serviceId} = useParams();
 
     useEffect(()=>{
         const url =`https://damp-peak-19610.herokuapp.com/orderdetails?email=${user.email}`
@@ -19,6 +24,18 @@ const AllOrder = () => {
         .then(res =>res.json())
         .then(data => setOrders(data))
     },[])
+
+    const handleDelete = id =>{
+         const url =`https://damp-peak-19610.herokuapp.com/orderdetails/${id}`
+         fetch(url,{
+           method:'DELETE'
+         })
+         .then(res=>res.json())
+         .then(data =>{
+          window.location.reload();
+            console.log(data);
+         })
+    }
 
     return (
         <div>
@@ -28,9 +45,9 @@ const AllOrder = () => {
         <TableHead>
           <TableRow>
             <TableCell>Product</TableCell>
-            <TableCell align="right">Price $</TableCell>
-            <TableCell align="right">Email</TableCell>
-            <TableCell align="right">Status</TableCell>
+            <TableCell align="center">Price $</TableCell>
+            <TableCell align="center">Email</TableCell>
+            <TableCell align="center">Status</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -42,9 +59,13 @@ const AllOrder = () => {
               <TableCell component="th" scope="row">
                 {row.name}
               </TableCell>
-              <TableCell align="right">{row.price}</TableCell>
-              <TableCell align="right">{row.email}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
+              <TableCell align="center">{row.price}</TableCell>
+              <TableCell align="center">{row.email}</TableCell>
+              <TableCell align="center">
+                 <Button 
+                 onClick={()=> handleDelete(row._id)}
+                 variant="contained">Detete</Button>
+               </TableCell>
             </TableRow>
           ))}
         </TableBody>

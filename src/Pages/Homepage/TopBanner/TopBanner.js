@@ -36,7 +36,7 @@ const TopBanner = () => {
                     </Typography>
                    <Typography sx={{my:5,ml:5}}>
                    <Link to="detailspage" style={{textDecoration:'none'}}>
-                   <Fab variant="extended">
+                   <Fab variant="extended" sx={{backgroundColor:'#FEEA00'}}>
                          <NavigationIcon sx={{ mr: 1 }} />
                           Explore More
                    </Fab>
@@ -46,7 +46,7 @@ const TopBanner = () => {
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <img
-                        style={{ width: '450px' }}
+                        style={{ width: '100%' }}
                         src={banner} alt="" />
                 </Grid>
 

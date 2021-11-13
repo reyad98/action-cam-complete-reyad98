@@ -44,13 +44,13 @@ const ShowProduct = () => {
      },[])
 
     return (
-        <Box sx={{ flexGrow: 1, my: 5 }}>
+        <Box sx={{ flexGrow: 1, my: 15 }}>
             <Container>
-                <Typography sx={{ fontWeight: 500, m: 2, my: 5, color: 'success.main' }} variant="h6" component="div">
-                    OUR SERVICES
+                <Typography sx={{ fontWeight: 500, m: 2, my: 5, color: '#9B0077' }} variant="h4" component="div">
+                    OUR COLLECTION
                 </Typography>
-                <Typography sx={{ fontWeight: 500, m: 2 }} variant="h4" component="div">
-                    Services we provide
+                <Typography sx={{ fontWeight: 500, m: 2 }} variant="h5" component="div">
+                    Choise Your One From Here
                 </Typography>
                 <Grid container spacing={{ xs: 2, md: 3, }} columns={{ xs: 4, sm: 8, md: 12 }}>
                     {
