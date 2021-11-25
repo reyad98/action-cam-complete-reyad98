@@ -12,7 +12,7 @@ The category commonly is associated with the GoPro range of cameras, and many ac
 In 2014, worldwide action camera sales increased by 44 percent from the previous year and half of them have the capability to shoot Ultra High Definition at 4K resolution. Action camera sales have surpassed traditional camcorder and compact camera sales, and it is predicted that in 2019, action camera sales will surpass all types of cameras due to the sales of other camera types declining or stabilizing
 
 ### `Its used for`
-What Is an Action Camera Used For? An action camera is a small, rugged, waterproof digital camera designed for capturing immersive action shots. They allow you to jump right in and become part of the adventure to capture photos and videos in a way that traditional cameras or smartphones just can't.
+What Is an Action Camera Used For? An action camera is a small, rugged, waterproof digital camera designed for capturing immersive action shots. They allow you to jump to right in and become part of the adventure to capture photos and videos in a way that traditional cameras or smartphones just can't.
 ### `Why you buy from us`
 We import cam at a resonable price and we sell at a low price from other.You also get free delivary if order.
 ### `Evaluation of actiuon cam`
